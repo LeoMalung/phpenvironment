@@ -10,9 +10,14 @@
     <h1 class="blue">Intro to PHP</h1>
     <div><a href="index.php">Home</a></div>
     <?php
+        date_default_timezone_set("America/Moncton");
         $now = time(); //Get current date time as EPOCH seconds
+    
+        $date = strtotime("2026-10-4 14:35:05");
     ?>
-    <h1>Epoch Seconds : <?= $now?></h1>
-    <h2>Formatted date : <?= date("Y-m-d H:i:s", $now)?></h2>
+    <h1>Now Epoch Seconds : <?= $now?></h1>
+    <h2>Now Formatted date : <?= date("Y-m-d H:i:s", $now)?></h2>
+    <h1>Epoch seconds of our constructed date: <?= $date?></h1>
+    <h2>Formatted date: <?= date("Y-m-d H:i:s", $date)?></h2>
 </body>
 </html>
